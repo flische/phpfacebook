@@ -11,9 +11,8 @@ $fb = new Facebook\Facebook([
 $helper = $fb->getRedirectLoginHelper();
 
 $permissions = ['public_profile,email, user_photos']; // Optional permissions
-$loginUrl = $helper->getLoginUrl('https://example.com/fb-callback.php', $permissions);
+$loginUrl = $helper->getLoginUrl('https://federico-lische.com/php_facebook_graph_sdk/fb-callback.php', $permissions);
 
-echo '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +21,7 @@ echo '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
     <title>Title</title>
 </head>
 <body>
-
+<a href="<?=htmlspecialchars($loginUrl);?>">Log in with Facebook!</a>
 </body>
 </html>
 
