@@ -11,7 +11,7 @@ $fb = new Facebook\Facebook([
 $helper = $fb->getRedirectLoginHelper();
 
 $permissions = ['public_profile,email, user_photos']; // Optional permissions
-$loginUrl = $helper->getLoginUrl('https://federico-lische.com/php_facebook_graph_sdk/fb-callback.php', $permissions);
+$loginUrl = $helper->getLoginUrl('https://federico-lische.com/phpfacebook/fb-callback.php', $permissions);
 
 ?>
 
